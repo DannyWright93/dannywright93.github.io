@@ -1,0 +1,64 @@
+
+#audioBox {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 6vw;
+    background: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2), 0 6px 20px rgba(0,0,0,.19);
+    z-index: 10;
+}
+
+#picbox1{float:left; z-index:1; position: fixed; top:0; }
+#picbox2{float:right; z-index:2; position: fixed;
+    right:0; top:0}
+
+
+#dragcontainer { list-style-type: none; margin: 0; padding: 0; float: left; min-width:50vw; }
+#dragcontainer li {min-width:68px; min-height:18px; margin: 2px; padding: 1px; float: left; width: 15vw; height: 4vw; text-align: center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) }
+
+#dropcontainer { list-style-type: none; margin: 0; padding: 0; float: right; min-width:48vw; margin-right:2vw;  }
+#dropcontainer li { min-width:68px; min-height:18px;margin: 2px; padding: 1px; float: right; width: 15vw; height: 4vw; text-align: center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) }
+
+
+.container{background:White; margin-top:1.5vw }
+.missy{float:left; height:4vw; width:15vw; min-width:68px; min-height:18px}
+
+
+.music{float:left}
+#totalc {
+    margin-top: 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.pulse {
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+@keyframes wobble {
+    0% {transform: translateX(0%);}
+    15% {transform: translateX(-25%) rotate(-5deg);}
+    30% {transform: translateX(20%) rotate(3deg);}
+    45% {transform: translateX(-15%) rotate(-3deg);}
+    60% {transform: translateX(10%) rotate(2deg);}
+    75% {transform: translateX(-5%) rotate(-1deg);}
+    100% {transform: translateX(0%);}
+}
+.wobble {
+    animation-name: wobble;
+}
+
